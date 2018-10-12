@@ -1,0 +1,55 @@
+<div *ngIf="track" class="row">
+  <div class="col-md-12">
+    <h2 *ngIf="track._id">Track Details</h2>
+    <h2 *ngIf="!track._id">New Track</h2>
+  </div>
+</div>
+<div *ngIf="track" class="row">
+  <form class="col-md-12">
+    <div class="form-group">
+      <label for="track-item_name">Item Name</label>
+      <input class="form-control" name="track-item_name" [(ngModel)]="track.item_name" placeholder="Item"/>
+    </div>
+    <div class="form-group">
+      <label for="track-parcel_type">Parcel Type</label>
+      <input class="form-control" name="track-parcel_type" [(ngModel)]="track.parcel_type" placeholder="Parcel"/>
+    </div>
+    <div class="form-group">
+      <label for="track-name">Name</label>
+      <input class="form-control" name="track-name" [(ngModel)]="track.name" placeholder="Name"/>
+    </div>
+    <div class="form-group">
+        <label for="track-address">Address</label>
+        <input class="form-control" name="track-address" [(ngModel)]="track.address" placeholder="Kotkantie 1"/>
+      </div>
+    <div class="form-group">
+      <label for="track-email">Email</label>
+      <input class="form-control" name="track-email" [(ngModel)]="track.email" placeholder="support@mlab.com"/>
+    </div>
+    <div class="form-group">
+      <label for="track-phone-mobile">Mobile</label>
+      <input class="form-control" name="track-phone-mobile" [(ngModel)]="track.phone.mobile" placeholder="1234567890"/>
+    </div>
+    <div class="form-group">
+      <label for="track-phone-work">Work</label>
+      <input class="form-control" name="track-phone-work" [(ngModel)]="track.phone.work" placeholder="0123456789"/>
+    </div>
+    <div class="form-group">
+        <!-- <label for="track-status">Status</label>
+        <input class="form-control" name="track-status" [(ngModel)]="track.status" placeholder="Proceed"/> -->
+        <div class="checkbox">
+          <!-- <label>
+            <input type="checkbox" name="track-status-proceed" [(ngModel)]="track.status.proceed"> Proceed <br>
+          </label> -->
+          <mat-checkbox name="track-status-proceed" [(ngModel)]="track.status.proceed">Proceed</mat-checkbox>
+          <mat-checkbox name="track-status-shipped" [(ngModel)]="track.status.shipped">Shipped</mat-checkbox>
+          <mat-checkbox name="track-status-lost" [(ngModel)]="track.status.lost">Lost</mat-checkbox>
+          <mat-checkbox name="track-status-delivered" [(ngModel)]="track.status.delivered">Delievered</mat-checkbox>
+          <mat-checkbox name="track-status-not_delivered" [(ngModel)]="track.status.not_delivered">Not delivered</mat-checkbox>
+        </div>
+    </div>
+    <button class="btn btn-primary" *ngIf="!track._id" (click)="createTrack(track)">Create</button>
+    <button class="btn btn-info" *ngIf="track._id" (click)="updateTrack(track)">Update</button>
+    <button class="btn btn-danger" *ngIf="track._id" (click)="deleteTrack(track._id)">Delete</button>
+  </form>
+</div>
