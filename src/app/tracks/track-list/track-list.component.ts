@@ -49,6 +49,7 @@ export class TrackListComponent implements OnInit {
       parcel_type: '',
       name: '',
       address: '',
+      postcode: '',
       email: '',
       phone: {
         work: '',

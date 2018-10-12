@@ -4,6 +4,7 @@ export class Track {
   parcel_type: string;
   name: string;
   address: string;
+  postcode: string;
   email: string;
   status: {
     'proceed': false,
