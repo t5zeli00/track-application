@@ -1,10 +1,11 @@
 # TrackApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4. 
+You can install it by running the following command: `npm install -g @angular/cli`
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `heroku open` for a server. Navigate to `https://powerful-inlet-18679.herokuapp.com/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
